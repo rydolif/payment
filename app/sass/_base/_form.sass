@@ -16,6 +16,7 @@ input, textarea, select
 		height: 30px
 		line-height: 30px
 		font-size: 12px
+		padding: 0 5px
 	
 	&:focus:required:invalid
 		border-color: red
@@ -53,4 +54,8 @@ label.error
 	font-size: 14px
 	border-radius: 10px
 	z-index: 1
-	min-width: 150px
+	white-space: nowrap
+
+	+r(576)
+		bottom: -15px
+		font-size: 10px !important
