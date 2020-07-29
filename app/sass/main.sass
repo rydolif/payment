@@ -128,16 +128,16 @@ h1
 			right: 12px
 			bottom: 15px
 			cursor: pointer
-			z-index: 1000
+			z-index: 2
 
 			+r(576)
 				right: 5px
-				bottom: 5px
+				bottom: 7px
 
 			&:hover,
 			&:focus
 				span
-					opacity: 1
+					display: block
 
 			i
 				display: flex
@@ -151,22 +151,24 @@ h1
 				background-color: #e6ebf4
 				color: #ffffff
 
+				+r(576)
+					width: 16px
+					height: 16px
+					font-size: 10px
+
 			span
+				display: none
 				position: absolute
 				bottom: 130%
 				left: 50%
 				transform: translate(-50%, 0)
-				opacity: 0
 				background-color: #2f3441
 				font-size: 12px
 				color: #ffffff
 				padding: 4px 8px
-				display: block
 				width: 1000%
 				max-width: 130px
 				border-radius: 4px
-				+transition
-				z-index: 10000000000
 
 				+r(450)
 					max-width: 85px
@@ -183,8 +185,8 @@ h1
 					border-right: 4px solid transparent
 					border-top: 4px solid #2f3441
 
-
 		&_number
+			position: relative
 			margin-left: -35px
 			width: 440px
 			padding: 24px 35px
@@ -223,7 +225,7 @@ h1
 			width: 440px
 			background-color: #d7deeb
 			border-radius: 20px
-			padding: 150px 15px 40px
+			padding: 265px 15px 0
 			z-index: -1
 
 			+r(576)
@@ -257,7 +259,9 @@ h1
 				width: 100%
 
 			&-line
-				position: relative
+				position: absolute
+				left: 103%
+				bottom: 0
 				width: 80px
 
 				+r(576)
@@ -286,6 +290,7 @@ h1
 					content: ''
 					position: absolute
 					left: 0
+					+transition
 
 				&::before
 					width: 22px
@@ -298,27 +303,32 @@ h1
 						height: 18px
 
 				&::after
-					width: 16px
-					height: 16px
-					border-radius: 3px
-					border: 1px solid #2f3441
-					background: #2f3441
+					width: 6px
+					height: 11px
+					border-bottom: 2px solid #4079fb
+					border-right: 2px solid #4079fb
 					left: 3px
 					top: 3px
-					transition: all .6s
+					opacity: 0
+					top: 4px
+					left: 8px
+					transform: rotate(45deg)
 
 					+r(576)
-						width: 12px
-						height: 12px
+						top: 2px
+						left: 6px
 
 			input[type="checkbox"]
 				display: none
 
+			input[type="checkbox"]:checked + label::before
+				border-color: #4079fb
+
 			input[type="checkbox"]:checked + label::after
-				transform: scale(1)
+				opacity: 1
 
 			input[type="checkbox"] + label::after
-				transform: scale(0)
+				opacity: 0
 
 		&_apple
 			margin-bottom: 15px
@@ -370,11 +380,20 @@ h1
 	flex-direction: column
 	justify-content: center
 	align-items: center
-	min-height: 100vh
+	min-height: 80vh
 	padding-bottom: 30px
+
+	h1
+		margin-bottom: 80px
+
+		+r(576)
+			font-size: 14px
+			margin-bottom: 40px
 
 	img
 		display: block
+		width: 77px
+		height: 77px
 		margin: 0 auto 30px
 
 	br
@@ -398,6 +417,96 @@ h1
 
 		+r(576)
 			height: 40px
+
+	&__wrap
+		max-width: 430px
+		margin: 0 auto
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15)
+		padding: 40px 50px 55px
+
+		+r(576)
+			padding: 25px
+			box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0)
+
+		+r(450)
+			padding: 15px
+
+		img
+			width: 100px
+			height: 100px
+			margin-bottom: 40px
+
+			+r(576)
+				width: 70px
+				height: 70px
+				margin-bottom: 20px
+
+		h1
+			font-size: 20px
+			margin-bottom: 50px
+
+			+r(576)
+				font-size: 18px
+				margin-bottom: 30px
+
+		p
+			display: flex
+			justify-content: center
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+		b
+			text-transform: uppercase
+			width: 50%
+
+		span
+			font-weight: 600
+			width: 42%
+
+		&_text
+			margin-bottom: 60px
+
+			+r(576)
+				margin-bottom: 30px
+
+
+.footer
+	background-color: #4079fb
+	padding: 15px 0
+	color: #ffffff
+	
+	+r(576)
+		font-size: 12px
+
+	p
+		+r(576)
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+
+	a
+		color: #ffffff
+		text-decoration: underline
+
+		+r(576)
+			font-size: 14px
+
+		&:hover,
+		&:focus
+			text-decoration: underline
+
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		+r(576)
+			flex-direction: column
+
 
 
 @import "page"

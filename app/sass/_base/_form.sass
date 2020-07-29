@@ -10,6 +10,7 @@ input, textarea, select
 	padding: 0 15px
 	height: 50px
 	line-height: 50px
+	+transition
 
 	+r(576)
 		height: 30px
@@ -43,25 +44,13 @@ textarea
 
 label.error
 	position: absolute
-	bottom: -25px
-	right: 25px
-	left: 25px
+	bottom: -20px
+	right: 0
 	transition: all .3s
-	animation: error .3s linear 1 forwards
-	color: #fff
+	color: #eb5757
 	text-align: center
-	font-weight: 600
-	background-color: red
+	font-weight: 400 !important
+	font-size: 14px
 	border-radius: 10px
 	z-index: 1
-
-	&::before
-		content: ''
-		position: absolute
-		left: 50%
-		top: -8px
-		margin-left: -2px
-		border-bottom: 4px solid red
-		border-left: 4px solid transparent
-		border-right: 4px solid transparent
-		border-top: 4px solid transparent
+	min-width: 150px

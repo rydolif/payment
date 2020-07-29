@@ -16,7 +16,7 @@
 	<header class="header">
 		<div class="header__container container">
 
-			<a href="/" class="header__logo header__logo">
+			<a href="/" class="header__logo">
 				<img src="img/logo.svg" alt="logo">
 			</a>
 
@@ -32,27 +32,35 @@
 				<p class="payment__info"><b>Номер заказа:</b> <span>x956958743</span></p>
 				<p class="payment__info"><b>Сумма платежа:</b> <span>12 000 ₽</span></p>
 
-				<form class="payment__form">
+				<form class="payment__form form">
 					<div class="payment__form_number">
-						<div class="payment__form_line">
-							<label for="card">Номер карты</label>
-							<input type="text" name="card" id="card" placeholder="0000 0000 0000 0000">
+						<div class="payment__form_cvv-line">
+							<label for="cvv">CVV</label>
+							<input type="text" name="cvv" id="cvv" required>
 							<p class="payment__form_info">
 								<i>?</i>
-								<span>Последние 3 цифры на белой полосе с обратной сторо</span>
+								<span>Последние 3 цифры на белой полосе с обратной стороны карты</span>
+							</p>
+						</div>
+						<div class="payment__form_line">
+							<label for="card">Номер карты</label>
+							<input type="text" name="card" id="card" placeholder="0000 0000 0000 0000" required>
+							<p class="payment__form_info">
+								<i>?</i>
+								<span>Номер карты напечатан на лицевой стороне карты и состоит из 16 или 19 цифр</span>
 							</p>
 						</div>
 						<div class="payment__form_line">
 							<label for="data">Срок действия</label>
-							<input type="text" name="data" id="data" placeholder="ММ/ГГ">
+							<input type="text" name="data" id="data" placeholder="ММ/ГГ" required>
 							<p class="payment__form_info">
 								<i>?</i>
-								<span>Последние 3 цифры на белой полосе с обратной сторо</span>
+								<span>Срок действия указан на лицевой стороне карты в виде 4 фицр: месяц/год</span>
 							</p>
 						</div>
 						<div class="payment__form_line">
 							<label for="name">Имя владельца</label>
-							<input type="text" name="name" id="name">
+							<input type="text" name="name" id="name" required>
 							<p class="payment__form_info">
 								<i>?</i>
 								<span>Латиницей, как указано на карте</span>
@@ -60,14 +68,7 @@
 						</div>
 					</div>
 					<div class="payment__form_cvv">
-						<div class="payment__form_cvv-line">
-							<label for="cvv">CVV</label>
-							<input type="text" name="cvv" id="cvv">
-							<p class="payment__form_info">
-								<i>?</i>
-								<span>Последние 3 цифры на белой полосе с обратной стороны карты</span>
-							</p>
-						</div>
+
 					</div>
 					<div class="payment__form_checkbox">
 						<input type="checkbox" id="remember">
@@ -94,7 +95,7 @@
 		</div>
 	</main>
 
-	<footer class="footer"></footer>
+	<footer></footer>
 
 	<script src="js/scripts.min.js"></script>
 
