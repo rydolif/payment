@@ -123,6 +123,56 @@ h1
 			+r(576)
 				font-size: 12px
 
+		&_info
+			position: absolute
+			right: 12px
+			bottom: 15px
+			cursor: pointer
+
+			&:hover,
+			&:focus
+				span
+					opacity: 1
+
+			i
+				display: flex
+				justify-content: center
+				align-items: center
+				line-height: 1
+				font-style: normal
+				width: 20px
+				height: 20px
+				border-radius: 20px
+				background-color: #e6ebf4
+				color: #ffffff
+
+			span
+				position: absolute
+				bottom: 130%
+				left: 50%
+				transform: translate(-50%, 0)
+				opacity: 0
+				background-color: #2f3441
+				font-size: 12px
+				color: #ffffff
+				padding: 4px 8px
+				display: block
+				width: 350px
+				border-radius: 4px
+				+transition
+
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					top: 100%
+					transform: translate(-50%, 0)
+					border-bottom: 4px solid transparent
+					border-left: 4px solid transparent
+					border-right: 4px solid transparent
+					border-top: 4px solid #2f3441
+
+
 		&_number
 			margin-left: -35px
 			width: 440px
@@ -144,6 +194,7 @@ h1
 				width: 75%
 
 		&_line
+			position: relative
 			margin-bottom: 12px
 
 			+r(576)
@@ -195,6 +246,7 @@ h1
 				width: 100%
 
 			&-line
+				position: relative
 				width: 80px
 
 				+r(576)
@@ -313,6 +365,10 @@ h1
 	img
 		display: block
 		margin: 0 auto 30px
+
+	br
+		+r(767)
+			display: none
 
 
 
