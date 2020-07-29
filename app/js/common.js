@@ -3,23 +3,12 @@ $(function() {
 //------------------------------------form-card------------------------------------------
   $('input[name="card"]').mask('0000 0000 0000 0000');
 
-  // jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-  //    return this.optional(element) || phone_number.match(/s\([0-9]{4}\)\s[0-9]{4}[0-9]{4}[0-9]{4}/);
-  // }, "Введите Ваш телефон");
-
 //------------------------------------form-data------------------------------------------
   $('input[name="data"]').mask('00/00');
-
-  // jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-  //    return this.optional(element) || phone_number.match(/s\([0-9]{4}\)\s[0-9]{4}[0-9]{4}[0-9]{4}/);
-  // }, "Введите Ваш телефон");
 
 //------------------------------------form-------------------------------------------
   $('input[name="cvv"]').mask('000');
 
-  // jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-  //    return this.optional(element) || phone_number.match(/s\([0-9]{4}\)\s[0-9]{4}[0-9]{4}[0-9]{4}/);
-  // }, "Введите Ваш телефон");
 
   // $(".form").each(function(index, el) {
   //   $(el).addClass('form-' + index);
