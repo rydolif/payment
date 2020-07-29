@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.ico">
+	<meta property="og:image" content="img/screenshot.png">
+	<link rel="stylesheet" href="css/main.min.css?v=1">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<a href="/" class="header__logo header__logo">
+				<img src="img/logo.svg" alt="logo">
+			</a>
+
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container">
+			<h1>Пополнить кошелек</h1>
+
+			<div class="payment">
+
+				<p class="payment__info"><b>Номер заказа:</b> <span>x956958743</span></p>
+				<p class="payment__info"><b>Сумма платежа:</b> <span>12 000 ₽</span></p>
+
+				<form class="payment__form">
+					<div class="payment__form_number">
+						<div class="payment__form_line">
+							<label for="card">Номер карты</label>
+							<input type="text" name="card" id="card" placeholder="0000 0000 0000 0000">
+						</div>
+						<div class="payment__form_line">
+							<label for="">Срок действия</label>
+							<input type="text" name="data" id="data" placeholder="ММ/ГГ">
+						</div>
+						<div class="payment__form_line">
+							<label for="">Имя владельца</label>
+							<input type="text" name="name" id="name">
+						</div>
+					</div>
+					<div class="payment__form_cvv">
+						<div class="payment__form_cvv-line">
+							<label for="cvv">CVV</label>
+							<input type="text" name="cvv" id="cvv">
+						</div>
+					</div>
+					<div class="payment__form_checkbox">
+						<input type="checkbox" id="remember">
+						<label for="remember">Запомнить карту</label>
+					</div>
+					<div class="payment__form_apple">
+						<button class="btn"><img src="img/apple.png" alt=""></button>
+					</div>
+					<div class="payment__form_pay">
+						<button class="btn">Оплатить 12 000 ₽</button>
+					</div>
+					<p>
+						Нажимая «Оплатить», вы принимаете условия оферты <br>платежного сервиса
+					</p>
+				</form>
+				<div class="payment__cart">
+					<img src="img/cart1.svg" alt="">
+					<img src="img/cart2.svg" alt="">
+					<img src="img/cart3.svg" alt="">
+					<img src="img/cart4.svg" alt="">
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<footer class="footer"></footer>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

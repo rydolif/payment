@@ -1,0 +1,307 @@
+@import "libs"
+@import "base"
+
+.container
+	width: 100%
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+	+r(1200)
+		max-width: 992px
+
+	+r(992)
+		max-width: 768px
+
+
+.header
+	position: absolute
+	top: 60px
+	right: 0
+	left: 0
+	z-index: 1000
+
+	+r(576)
+		position: relative
+		top: 0
+		padding-top: 30px
+		margin-bottom: 30px
+
+	&__container
+		+between
+
+	&__logo
+		img
+			width: 130px
+			height: auto
+
+			+r(576)
+				width: 100px
+
+h1
+	font-size: 24px
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 140px
+
+	+r(1200)
+		margin-bottom: 60px
+	
+	+r(576)
+		font-size: 20px
+		margin-bottom: 30px
+
+.main
+	padding-top: 70px
+
+	+r(576)
+		padding-top: 0
+
+.payment
+	display: flex
+	flex-direction: column
+	width: 490px
+	margin: 0 auto
+	padding-bottom: 70px
+
+	+r(576)
+		width: 100%
+
+	br
+		+r(576)
+			display: none
+
+	&__info
+		width: 100%
+		display: flex
+		justify-content: space-between
+		font-size: 20px
+		margin-bottom: 10px
+
+		+r(576)
+			justify-content: center
+			font-size: 14px
+			width: 220px
+			margin: 0 auto 10px
+
+		&:nth-child(2)
+			margin-bottom: 25px
+
+		span
+			width: 58%
+			font-weight: 600
+
+			+r(576)
+				width: 41%
+
+		b
+			text-transform: uppercase
+			width: 40%
+
+			+r(576)
+				width: 57%
+
+	&__form
+		position: relative
+		z-index: 1
+		margin-bottom: 40px
+
+		+r(576)
+			margin-bottom: 20px
+
+		label
+			margin-bottom: 0
+			font-weight: 600
+
+			+r(576)
+				font-size: 12px
+
+		p
+			text-align: center
+			font-size: 14px
+
+			+r(576)
+				font-size: 12px
+
+		&_number
+			margin-left: -35px
+			width: 440px
+			padding: 24px 35px
+			background-color: #e6ebf4
+			border: 1px solid #c7d3ea
+			border-radius: 20px
+			z-index: 2
+			margin-bottom: 50px
+
+			+r(576)
+				width: 70%
+				margin-left: 5%
+				margin-bottom: 30px
+				padding: 10px 15px
+
+			+r(450)
+				margin-left: 0
+				width: 75%
+
+		&_line
+			margin-bottom: 12px
+
+			+r(576)
+				margin-bottom: 8px
+
+			&:last-child
+				margin-bottom: 0
+
+		&_cvv
+			position: absolute
+			top: 50px
+			left: 70px
+			display: flex
+			justify-content: flex-end
+			width: 440px
+			background-color: #d7deeb
+			border-radius: 20px
+			padding: 150px 15px 40px
+			z-index: -1
+
+			+r(576)
+				width: 70%
+				padding-top: 100px
+				padding-bottom: 15px
+				left: 25%
+
+			+r(450)
+				top: 25px
+				left: auto
+				right: 0
+				padding-top: 85px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 30px
+				left: 0
+				right: 0
+				background-color: #c3cee1
+				height: 55px
+				width: 100%
+				z-index: -1
+
+				+r(576)
+					top: 15px
+					height: 30px
+
+			label
+				width: 100%
+
+			&-line
+				width: 80px
+
+				+r(576)
+					width: 60px
+
+				+r(450)
+					width: 45px
+
+		&_checkbox
+			margin-bottom: 30px
+
+			label
+				position: relative
+				padding-left: 40px
+				color: #2f3441
+				cursor: pointer
+				margin-bottom: 0
+				margin-right: 0
+
+				+r(576)
+					padding-left: 30px
+					font-size: 13px
+
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+
+				&::before
+					width: 22px
+					height: 22px
+					border-radius: 3px
+					border: 2px solid #2f3441
+
+					+r(576)
+						width: 18px
+						height: 18px
+
+				&::after
+					width: 16px
+					height: 16px
+					border-radius: 3px
+					border: 1px solid #2f3441
+					background: #2f3441
+					left: 3px
+					top: 3px
+					transition: all .6s
+
+					+r(576)
+						width: 12px
+						height: 12px
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label::after
+				transform: scale(1)
+
+			input[type="checkbox"] + label::after
+				transform: scale(0)
+
+		&_apple
+			margin-bottom: 15px
+
+			.btn
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #fff
+				border: 1px solid #0d1e3b
+				width: 100%
+				height: 50px
+				width: 100%
+
+				+r(576)
+					height: 40px
+
+			img
+				width: 45px
+
+		&_pay
+			margin-bottom: 15px
+
+			.btn
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #4079fb
+				border: 1px solid #4079fb
+				width: 100%
+				height: 50px
+				width: 100%
+				color: #ffffff
+				font-weight: 600
+
+				+r(576)
+					height: 40px
+
+	&__cart
+		display: flex
+		justify-content: space-between
+
+		img
+			height: 25px
+			width: auto
+
+
+
+@import "page"
